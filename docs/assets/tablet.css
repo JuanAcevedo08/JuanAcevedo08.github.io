@@ -1,0 +1,10 @@
+.container {
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.c2{
+width: 42%;
+}
+.c3{
+width: 55%;
+}
