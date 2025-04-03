@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre mí</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS -->
+    <style>
+        /* Estilos específicos para la página "Sobre mí" */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #f4f4f4, #ddd);
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .logo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #333;
+            margin-bottom: 1rem;
+        }
+
+        .about-content {
+            max-width: 600px;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-content h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .about-content p {
+            font-size: 1.2rem;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .back-link {
+            margin-top: 2rem;
+            font-size: 1rem;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <img src="./imgs/db80524d-24b1-4389-8bea-28b1aadecb68.png" alt="Mi Logo" class="logo">
+    <div class="about-content">
+        <h1>Sobre mí</h1>
+        <p>
+            ¡Hola! Soy Juan Acevedo, un desarrollador web apasionado por crear soluciones innovadoras y funcionales.
+            Me encanta trabajar en proyectos que combinan diseño y tecnología para ofrecer experiencias únicas a los usuarios.
+            Con experiencia en HTML, CSS, JavaScript y frameworks modernos como React, estoy comprometido con el aprendizaje continuo
+            y la mejora constante.
+        </p>
+    </div>
+    <a href="index.html" class="back-link">Volver al inicio</a>
+</body>
+</html>
