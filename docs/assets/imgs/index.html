@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace a tu archivo CSS -->
+</head>
+<body>
+    <!-- Encabezado -->
+    <header class="header">
+        <div class="container">
+            <div class="profile">
+                <img src="assets/imgs/logo.png" alt="Mi Logo" class="logo">
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#about">Sobre mí</a></li>
+                    <li><a href="#projects">Proyectos</a></li>
+                    <li><a href="#skills">Habilidades</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección de presentación -->
+    <section id="about" class="about">
+        <div class="container">
+            <h1>Hola, soy [Tu Nombre]</h1>
+            <p>Soy un desarrollador web apasionado por crear soluciones innovadoras y funcionales.</p>
+        </div>
+    </section>
+
+    <!-- Sección de proyectos -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Proyectos</h2>
+            <div class="project-list">
+                <div class="project">
+                    <h3>Proyecto 1</h3>
+                    <p>Descripción breve del proyecto.</p>
+                </div>
+                <div class="project">
+                    <h3>Proyecto 2</h3>
+                    <p>Descripción breve del proyecto.</p>
+                </div>
+                <div class="project">
+                    <h3>Proyecto 3</h3>
+                    <p>Descripción breve del proyecto.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de habilidades -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>Habilidades</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Node.js</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Sección de contacto -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contacto</h2>
+            <form action="#" method="post">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 [Tu Nombre]. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
