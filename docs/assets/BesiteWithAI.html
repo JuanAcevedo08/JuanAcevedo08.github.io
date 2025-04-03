@@ -11,7 +11,7 @@
     <header class="header">
         <div class="container">
             <div class="profile">
-                <img src="./imgs/db80524d-24b1-4389-8bea-28b1aadecb68 (1).png" alt="Mi Logo" class="logo">
+                <img src="./imgs/db80524d-24b1-4389-8bea-28b1aadecb68 (1) (1) (1).png" alt="Mi Logo" class="logo">
             </div>
             <nav class="nav">
                 <ul>
@@ -91,17 +91,21 @@
     <section id="contact" class="contact">
         <div class="container">
             <h2>Contacto</h2>
+            <p>¿Tienes alguna pregunta o quieres trabajar conmigo? ¡Envíame un mensaje!</p>
             <form action="#" method="post">
-                <label for="name">Nombre:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Correo electrónico:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="message">Mensaje:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-                
-                <button type="submit">Enviar</button>
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" placeholder="Ingresa tu correo electrónico" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                </div>
+                <button type="submit">Enviar mensaje</button>
             </form>
         </div>
     </section>

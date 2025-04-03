@@ -213,34 +213,6 @@ a {
     color: #555; /* Texto gris oscuro */
 }
 
-/* Estilo moderno para enlaces en los títulos de proyectos */
-.projects h3 a {
-    font-size: 1.5rem; /* Tamaño de fuente más grande */
-    font-weight: bold; /* Texto en negrita */
-    color: #177140; /* Color verde vibrante */
-    position: relative; /* Necesario para el efecto hover */
-    transition: color 0.3s ease; /* Transición suave para el color */
-}
-
-.projects h3 a::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 3px;
-    background: linear-gradient(90deg, #0c075e, #ff5733, #33c1ff); /* Degradado para el subrayado */
-    transition: width 0.5s ease; /* Transición suave para el subrayado */
-}
-
-.projects h3 a:hover {
-    color: #ff5733; /* Cambia el color del texto al pasar el mouse */
-}
-
-.projects h3 a:hover::before {
-    width: 100%; /* Expande el subrayado al 100% del ancho del enlace */
-}
-
 /* Sección de habilidades */
 .skills {
     padding: 2rem 0;
@@ -289,14 +261,14 @@ a {
 
 /* Sección de contacto */
 .contact {
-    padding: 2rem 0;
-    background: linear-gradient(135deg,  #4a00e0, #8e2de2); /* Fondo degradado azul */
+    padding: 3rem 1rem;
+    background: linear-gradient(135deg, #4a00e0, #8e2de2); /* Fondo degradado azul y púrpura */
     color: #fff; /* Texto blanco */
     text-align: center;
     border-radius: 10px; /* Bordes redondeados */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
     margin: 2rem auto; /* Espaciado superior e inferior */
-    max-width: 1200px; /* Limita el ancho máximo */
+    max-width: 800px; /* Limita el ancho máximo */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
 }
 
@@ -306,9 +278,15 @@ a {
 }
 
 .contact h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
     color: #ffcc00; /* Amarillo para destacar el título */
+}
+
+.contact p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #f0f0f0; /* Texto gris claro */
 }
 
 .contact form {
@@ -316,25 +294,51 @@ a {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem; /* Espaciado entre los campos */
+}
+
+.contact .form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.contact label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffcc00; /* Amarillo para los labels */
+    margin-bottom: 0.5rem;
 }
 
 .contact input,
-.contact textarea,
-.contact button {
+.contact textarea {
     width: 100%;
-    padding: 0.5rem;
+    padding: 0.8rem;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 1rem;
+    background-color: #fff; /* Fondo blanco */
+    color: #333; /* Texto oscuro */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    border-color: #ffcc00; /* Amarillo al enfocar */
+    box-shadow: 0 0 5px rgba(255, 204, 0, 0.5); /* Sombra amarilla */
+    outline: none; /* Elimina el borde predeterminado */
 }
 
 .contact button {
     background-color: #ffcc00; /* Amarillo */
     color: #333; /* Texto oscuro */
     border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave */
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .contact button:hover {
@@ -421,7 +425,7 @@ a {
 .custom-link a {
     font-size: 1.5rem; /* Tamaño de fuente más grande */
     font-weight: bold; /* Texto en negrita */
-    color: #177140; /* Color amarillo vibrante */
+    color: #172071; /* Color amarillo vibrante */
     position: relative; /* Necesario para el efecto hover */
     transition: color 0.3s ease; /* Transición suave para el color */
 }
