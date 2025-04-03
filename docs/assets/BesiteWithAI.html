@@ -5,13 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Portafolio</title>
     <link rel="stylesheet" href="styles.css"> <!-- Enlace a tu archivo CSS -->
+    <style>
+        /* Redes sociales en el footer */
+        .footer .social-links {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center; /* Centra los íconos */
+            gap: 1rem; /* Espaciado entre los íconos */
+        }
+
+        .footer .social-icon img {
+            width: 40px; /* Tamaño de los íconos */
+            height: 40px;
+            transition: transform 0.3s ease, opacity 0.3s ease; /* Transición suave */
+        }
+
+        .footer .social-icon img:hover {
+            transform: scale(1.2); /* Aumenta ligeramente el tamaño al pasar el mouse */
+            opacity: 0.8; /* Reduce la opacidad para un efecto visual */
+        }
+    </style>
 </head>
 <body>
     <!-- Encabezado -->
     <header class="header">
         <div class="container">
             <div class="profile">
-                <img src="./imgs/db80524d-24b1-4389-8bea-28b1aadecb68.png" alt="Mi Logo" class="logo">
+                <img src="./imgs/db80524d-24b1-4389-8bea-28b1aadecb68 (1).png" alt="Mi Logo" class="logo">
             </div>
             <nav class="nav">
                 <ul>
@@ -49,15 +69,17 @@
             <h2>Proyectos</h2>
             <div class="project-list">
                 <div class="project">
-                    <h3>Proyecto 1</h3>
+                    <h3 class="custom-link">
+                        <a href="https://github.com/JuanAcevedo08/AllProjects">All Projects</a>
+                    </h3></h3>
+                    <p>You can access all my projects, from the largest to the smallest, through my GitHub repository. Explore them and discover what I've been working on!</p>
+                </div>
+                <div class="project">
+                    <h3>Frist Favorite Project</h3>
                     <p>Descripción breve del proyecto.</p>
                 </div>
                 <div class="project">
-                    <h3>Proyecto 2</h3>
-                    <p>Descripción breve del proyecto.</p>
-                </div>
-                <div class="project">
-                    <h3>Proyecto 3</h3>
+                    <h3>Second Favorite Project</h3>
                     <p>Descripción breve del proyecto.</p>
                 </div>
             </div>
@@ -72,6 +94,11 @@
                 <li>HTML</li>
                 <li>CSS</li>
                 <li>AI</li>
+                <li>PYTHON</li>
+                <li>DJANGO</li>
+                <li>MySQL</li>
+                <li>SQL</li>
+                <li>MongoDB</li>
             </ul>
         </div>
     </section>
@@ -99,6 +126,12 @@
     <footer class="footer">
         <div class="container">
             <p>&copy; 2025 Juan Acevedo. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/juandavid08948/" class="social-icon" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Icon"></a>
+                <a href="https://x.com/JuanAcevedo008," class="social-icon" target="_blank"><img src="./imgs/twitterx--v2.png" alt="X Icon"></a>
+                <a href="https://www.linkedin.com/in/juan-acevedo-ba0242339/" class="social-icon" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Linkedin_icon.svg" alt="LinkedIn Icon"></a>
+                <a href="https://github.com/JuanAcevedo08" class="social-icon" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub Icon"></a>
+            </div>
         </div>
     </footer>
 </body>
