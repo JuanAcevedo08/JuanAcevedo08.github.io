@@ -14,7 +14,7 @@
             align-items: center;
             min-height: 100vh;
             margin: 0;
-            background: linear-gradient(135deg, #f4f4f4, #ddd);
+            background: linear-gradient(135deg, #000000, #ddd);
             font-family: Arial, sans-serif;
             text-align: center;
         }
@@ -33,7 +33,7 @@
             background: #fff;
             padding: 2rem;
             border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 10px 10px 20px red, -10px -10px 20px blue, 10px -10px 20px green, -10px 10px 20px yellow;
         }
 
         .about-content h1 {
@@ -58,6 +58,9 @@
 
         .back-link:hover {
             text-decoration: underline;
+            color: #ff4500;
+            transform: scale(1.1);
+            transition: all 0.3s ease-in-out;
         }
     </style>
 </head>
@@ -66,10 +69,10 @@
     <div class="about-content">
         <h1>Sobre mí</h1>
         <p>
-            ¡Hola! Soy Juan Acevedo, un desarrollador web apasionado por crear soluciones innovadoras y funcionales.
-            Me encanta trabajar en proyectos que combinan diseño y tecnología para ofrecer experiencias únicas a los usuarios.
-            Con experiencia en HTML, CSS, JavaScript y frameworks modernos como React, estoy comprometido con el aprendizaje continuo
-            y la mejora constante.
+            Hi! I'm Juan Acevedo, a web developer passionate about creating innovative and functional solutions.
+            I love working on projects that combine design and technology to provide unique user experiences.
+            With experience in HTML, CSS, JavaScript, and modern frameworks like React, I am committed to continuous learning
+            and constant improvement.
         </p>
     </div>
     <a href="index.html" class="back-link">Volver al inicio</a>
