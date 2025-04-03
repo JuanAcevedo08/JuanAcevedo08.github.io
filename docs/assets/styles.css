@@ -5,6 +5,8 @@ body {
     padding: 0;
     box-sizing: border-box;
     line-height: 1.6;
+    background: linear-gradient(135deg, #2c3e50, #3498db); /* Fondo degradado azul oscuro y azul claro */
+    color: #fff; /* Texto blanco para contraste */
 }
 
 .container {
@@ -97,7 +99,7 @@ body {
 .about {
     text-align: center;
     padding: 2rem;
-    background: linear-gradient(135deg, #f4f4f4, #dbd002); /* Fondo degradado gris y amarillo */
+    background: linear-gradient(135deg, #4a00e0, #8e2de2); /* Fondo degradado gris y amarillo */
     border-radius: 10px; /* Bordes redondeados */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para un efecto de elevación */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
@@ -118,7 +120,7 @@ body {
 
 .about p {
     font-size: 1.2rem;
-    color: #555; /* Color del texto */
+    color: #000000; /* Color del texto */
     line-height: 1.8; /* Espaciado entre líneas */
     margin-bottom: 1rem;
 }
@@ -152,11 +154,25 @@ body {
 /* Sección de proyectos */
 .projects {
     padding: 2rem 0;
+    background: linear-gradient(135deg, #4a00e0, #8e2de2); /* Fondo degradado púrpura */
+    color: #fff; /* Texto blanco para contraste */
+    text-align: center;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    margin: 2rem auto; /* Espaciado superior e inferior */
+    max-width: 1200px; /* Limita el ancho máximo */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+}
+
+.projects:hover {
+    transform: scale(1.02); /* Aumenta ligeramente el tamaño al pasar el mouse */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
 }
 
 .projects h2 {
-    text-align: center;
-    margin-bottom: 2rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #ffcc00; /* Amarillo para destacar el título */
 }
 
 .project-list {
@@ -167,21 +183,28 @@ body {
 }
 
 .project {
-    background-color: #f4f4f4;
+    background-color: #fff; /* Fondo blanco */
     padding: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    width: calc(33.333% - 1rem);
+    border: 1px solid #ddd; /* Borde claro */
+    border-radius: 5px; /* Bordes redondeados */
+    width: calc(33.333% - 1rem); /* Ajusta el ancho */
     box-sizing: border-box;
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+}
+
+.project:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
 }
 
 .project h3 {
     margin-bottom: 0.5rem;
+    color: #333; /* Texto oscuro */
 }
 
 .project p {
-    color: #555;
+    color: #555; /* Texto gris oscuro */
 }
 
 /* Sección de habilidades */
@@ -233,12 +256,25 @@ body {
 /* Sección de contacto */
 .contact {
     padding: 2rem 0;
-    background-color: #f4f4f4;
+    background: linear-gradient(135deg, #1e90ff, #00c6ff); /* Fondo degradado azul */
+    color: #fff; /* Texto blanco */
+    text-align: center;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    margin: 2rem auto; /* Espaciado superior e inferior */
+    max-width: 1200px; /* Limita el ancho máximo */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+}
+
+.contact:hover {
+    transform: scale(1.02); /* Aumenta ligeramente el tamaño al pasar el mouse */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
 }
 
 .contact h2 {
-    text-align: center;
+    font-size: 2rem;
     margin-bottom: 1rem;
+    color: #ffcc00; /* Amarillo para destacar el título */
 }
 
 .contact form {
@@ -260,14 +296,16 @@ body {
 }
 
 .contact button {
-    background-color: #333;
-    color: #fff;
+    background-color: #ffcc00; /* Amarillo */
+    color: #333; /* Texto oscuro */
     border: none;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave */
 }
 
 .contact button:hover {
-    background-color: #555;
+    background-color: #ff9900; /* Naranja oscuro */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
 }
 
 /* Pie de página */
@@ -314,7 +352,7 @@ body {
 .custom-text-color {
     font-size: 1.2rem;
     font-family: 'Georgia', serif; /* Cambia la fuente a una más elegante */
-    color: #555; /* Color base del texto */
+    color: #323232; /* Color base del texto */
     line-height: 1.8; /* Espaciado entre líneas */
     margin-bottom: 1rem; /* Espaciado inferior entre párrafos */
     text-align: justify; /* Justifica el texto para un diseño más limpio */
@@ -322,6 +360,6 @@ body {
 }
 
 .custom-text-color:hover {
-    color: #007bff; /* Cambia el color al pasar el mouse a un azul */
+    color: #f8f8f8; /* Cambia el color al pasar el mouse a un azul */
     transform: scale(1.02); /* Aumenta ligeramente el tamaño */
 }
