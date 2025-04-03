@@ -15,9 +15,13 @@ body {
 
 /* Encabezado */
 .header {
-    background-color: #333;
-    color: #fff;
+    background: linear-gradient(90deg, #4a00e0, #8e2de2); /* Degradado púrpura moderno */
+    color: #fff; /* Texto blanco para contraste */
     padding: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .header .container {
@@ -38,10 +42,42 @@ body {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+    position: relative; /* Necesario para el efecto hover */
+    overflow: hidden; /* Oculta el subrayado fuera del área del enlace */
+    padding: 0.5rem 0; /* Espaciado adicional para el efecto */
+    transition: color 0.3s ease; /* Transición suave del color */
 }
 
-.nav ul li a:hover {
-    text-decoration: underline;
+.nav ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: all 0.3s ease; /* Transición suave para el subrayado */
+    transform: translateX(-50%);
+}
+
+.nav ul li:nth-child(1) a:hover {
+    color: #ffcc00; /* Amarillo */
+}
+
+.nav ul li:nth-child(2) a:hover {
+    color: #0000ff; /* Azul */
+}
+
+.nav ul li:nth-child(3) a:hover {
+    color: #ff0000; /* Rojo */
+}
+
+.nav ul li:last-child a:hover {
+    color: #00ffff; /* Azul Aqua */
+}
+
+.nav ul li a:hover::after {
+    width: 100%; /* Expande el subrayado al 100% del ancho del enlace */
 }
 
 /* Logo */
@@ -60,18 +96,57 @@ body {
 /* Sección de presentación */
 .about {
     text-align: center;
-    padding: 2rem 0;
-    background-color: #f4f4f4;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f4f4f4, #dbd002); /* Fondo degradado gris y amarillo */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para un efecto de elevación */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+    margin: 2rem auto; /* Espaciado superior e inferior */
+    max-width: 1200px; /* Limita el ancho máximo */
+}
+
+.about:hover {
+    transform: scale(1.02); /* Aumenta ligeramente el tamaño al pasar el mouse */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
 }
 
 .about h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    color: #333; /* Color del texto */
 }
 
 .about p {
     font-size: 1.2rem;
-    color: #555;
+    color: #555; /* Color del texto */
+    line-height: 1.8; /* Espaciado entre líneas */
+    margin-bottom: 1rem;
+}
+
+/* Título interactivo */
+.interactive-title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(90deg, #ffcc00, #ff5733, #33c1ff, #8e44ad);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-animation 3s infinite;
+    margin-bottom: 1rem;
+}
+
+/* Animación del degradado */
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* Sección de proyectos */
@@ -112,13 +187,25 @@ body {
 /* Sección de habilidades */
 .skills {
     padding: 2rem 0;
-    background-color: #333;
-    color: #fff;
+    background: linear-gradient(135deg, #1e90ff, #00c6ff); /* Degradado azul moderno */
+    color: #fff; /* Texto blanco para contraste */
     text-align: center;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    margin: 2rem auto; /* Espaciado superior e inferior */
+    max-width: 1200px; /* Limita el ancho máximo */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+}
+
+.skills:hover {
+    transform: scale(1.02); /* Aumenta ligeramente el tamaño al pasar el mouse */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
 }
 
 .skills h2 {
+    font-size: 2rem;
     margin-bottom: 1rem;
+    color: #ffcc00; /* Amarillo para destacar el título */
 }
 
 .skills ul {
@@ -130,8 +217,17 @@ body {
     display: inline-block;
     margin: 0.5rem;
     padding: 0.5rem 1rem;
-    background-color: #444;
-    border-radius: 5px;
+    background-color: #005f99; /* Fondo azul oscuro para las habilidades */
+    color: #fff; /* Texto blanco */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave */
+}
+
+.skills ul li:hover {
+    background-color: #ffcc00; /* Cambia el fondo a amarillo al pasar el mouse */
+    color: #333; /* Cambia el texto a oscuro */
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
 }
 
 /* Sección de contacto */
@@ -176,11 +272,24 @@ body {
 
 /* Pie de página */
 .footer {
-    background-color: #333;
-    color: #fff;
+    background: linear-gradient(135deg, #8e2de2, #4a00e0); /* Degradado púrpura moderno */
+    color: #fff; /* Texto blanco */
     text-align: center;
-    padding: 1rem 0;
+    padding: 1.5rem 0; /* Espaciado interno */
     font-size: 0.9rem;
+    border-top: 2px solid #ffcc00; /* Línea superior amarilla */
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1); /* Sombra superior */
+}
+
+.footer a {
+    color: #ffcc00; /* Enlaces amarillos */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Transición suave */
+}
+
+.footer a:hover {
+    color: #fff; /* Cambia el color a blanco al pasar el mouse */
 }
 
 /* Responsivo */
@@ -199,4 +308,20 @@ body {
         flex-direction: column;
         gap: 0.5rem;
     }
+}
+
+/* Custom Text Color */
+.custom-text-color {
+    font-size: 1.2rem;
+    font-family: 'Georgia', serif; /* Cambia la fuente a una más elegante */
+    color: #555; /* Color base del texto */
+    line-height: 1.8; /* Espaciado entre líneas */
+    margin-bottom: 1rem; /* Espaciado inferior entre párrafos */
+    text-align: justify; /* Justifica el texto para un diseño más limpio */
+    transition: color 0.3s ease, transform 0.3s ease; /* Transición suave */
+}
+
+.custom-text-color:hover {
+    color: #007bff; /* Cambia el color al pasar el mouse a un azul */
+    transform: scale(1.02); /* Aumenta ligeramente el tamaño */
 }
