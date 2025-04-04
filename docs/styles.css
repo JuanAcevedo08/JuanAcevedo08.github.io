@@ -213,6 +213,34 @@ a {
     color: #555; /* Texto gris oscuro */
 }
 
+/* Estilo moderno para enlaces en los títulos de proyectos */
+.projects h3 a {
+    font-size: 1.5rem; /* Tamaño de fuente más grande */
+    font-weight: bold; /* Texto en negrita */
+    color: #172071; /* Color azul vibrante */
+    position: relative; /* Necesario para el efecto hover */
+    transition: color 0.3s ease; /* Transición suave para el color */
+}
+
+.projects h3 a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #0c075e, #ff5733, #33c1ff); /* Degradado para el subrayado */
+    transition: width 0.5s ease; /* Transición suave para el subrayado */
+}
+
+.projects h3 a:hover {
+    color: #ff5733; /* Cambia el color del texto al pasar el mouse */
+}
+
+.projects h3 a:hover::before {
+    width: 100%; /* Expande el subrayado al 100% del ancho del enlace */
+}
+
 /* Sección de habilidades */
 .skills {
     padding: 2rem 0;
