@@ -3,22 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <title>Portafolio de Juan Acevedo</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer></script>
 </head>
 <body>
     <!-- Header -->
     <header class="header">
         <div class="container">
-            <div class="profile">
-                <img src="./assets/imgs/Profile Picture.jpg" alt="My Logo" class="logo">
-            </div>
+            <div class="logo">Juan Acevedo</div>
             <nav class="nav">
                 <ul>
-                    <li><a href="./aboutme.html">About Me</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="https://github.com/JuanAcevedo08" target="_blank">Contact</a></li>
+                    <li><a href="#about">Sobre mí</a></li>
+                    <li><a href="#projects">Proyectos</a></li>
+                    <li><a href="#contact">Contacto</a></li>
                 </ul>
             </nav>
         </div>
@@ -27,102 +25,35 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h1 class="interactive-title">Hi There Im Juan Acevedo</h1>
-            <p class="custom-text-color">
-            I am a self-taught learner with a deep passion for software development. 
-            I enjoy exploring new technologies and building projects that challenge my skills 
-            and creativity. My interests also extend to the fascinating world of machine learning, 
-            where I am constantly learning and experimenting with innovative ideas.
-            </p>
-            <p class="custom-text-color">
-            Additionally, I am dedicated to improving my English proficiency, as I believe it 
-            is an essential skill for connecting with the global tech community and accessing 
-            a wealth of knowledge and opportunities. My journey is driven by curiosity, 
-            determination, and a love for continuous learning.
-            </p>
+            <h1>Hola, soy Juan Acevedo</h1>
+            <p>Soy un desarrollador apasionado por la tecnología y el aprendizaje continuo. Me encanta explorar nuevas ideas y crear proyectos innovadores.</p>
         </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2>Projects</h2>
-            <div class="project-list">
-                <div class="project">
-                    <h3 class="custom-link">
-                        <a href="https://github.com/JuanAcevedo08/AllProjects">All Projects</a>
-                    </h3>
-                    <p>You can access all my projects, from the largest to the smallest, through my GitHub repository. Explore them and discover what I've been working on!</p>
-                </div>
-                <div class="project">
-                    <h3>
-                        <a href="">First Favorite Project</a>
-                    </h3>
-                    <p>Coming Soon</p>
-                </div>
-                <div class="project">
-                    <h3>
-                        <a href="">Second Favorite Project</a>
-                    </h3>
-                    <p>Coming Soon</p>
-                </div>
+            <h2>Proyectos</h2>
+            <div class="project-grid">
+                <div class="project-block">Proyecto 1</div>
+                <div class="project-block">Proyecto 2</div>
+                <div class="project-block">Proyecto 3</div>
             </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2>Skills</h2>
-            <ul>
-                <li><a href="https://github.com/JuanAcevedo08/JuanAcevedo08/wiki/Skills" target="_blank">HTML</a></li>
-                <li><a href="https://github.com/JuanAcevedo08/JuanAcevedo08/wiki/Skills" target="_blank">CSS</a></li>
-                <li><a href="https://github.com/JuanAcevedo08/JuanAcevedo08/wiki/Skills" target="_blank">AI</a></li>
-                <li><a href="https://github.com/JuanAcevedo08/JuanAcevedo08/wiki/Skills" target="_blank">PYTHON</a></li>
-                <li><a href="https://github.com/JuanAcevedo08/JuanAcevedo08/wiki/Skills" target="_blank">DJANGO</a></li>
-                <li><a href="https://github.com/JuanAcevedo08/JuanAcevedo08/wiki/Skills" target="_blank">MySQL</a></li>
-                <li><a href="https://github.com/JuanAcevedo08/JuanAcevedo08/wiki/Skills" target="_blank">SQL</a></li>
-                <li><a href="https://github.com/JuanAcevedo08/JuanAcevedo08/wiki/Skills" target="_blank">MongoDB</a></li>
-            </ul>
-            <p class="skills-description">
-                Click on any of the skills to learn more about them on my blog! 🌟📚✨
-            </p>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2>Contact</h2>
-            <p>Do you have any questions or want to work with me? Send me a message!</p>
-            <form action="" method="post">
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
-                </div>
-                <button type="submit">Send Message</button>
-            </form>
+            <h2>Contacto</h2>
+            <a href="https://www.linkedin.com/in/juan-acevedo-ba0242339/" target="_blank" class="contact-button">Conéctate conmigo en LinkedIn</a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Juan Acevedo. This project is licensed under the <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a>. All rights reserved.</p>
-            <div class="social-links">
-                <a href="https://www.instagram.com/juandavid08948/" class="social-icon" target="_blank"><img src="./assets/imgs/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3JtNTMzLW5lb24tMDAzLmpwZw.webp" alt="Instagram Icon"></a>
-                <a href="https://x.com/JuanAcevedo008," class="social-icon" target="_blank"><img src="./assets/imgs/twitterx--v2.png" alt="X Icon"></a>
-                <a href="https://www.linkedin.com/in/juan-acevedo-ba0242339/" class="social-icon" target="_blank"><img src="./assets/imgs/LinkedIn_logo_initials.png" alt="LinkedIn Icon"></a>
-                <a href="https://github.com/JuanAcevedo08" class="social-icon" target="_blank"><img src="./assets/imgs/github.png" alt="GitHub Icon"></a>
-            </div>
+            <p>&copy; 2025 Juan Acevedo. Todos los derechos reservados.</p>
         </div>
     </footer>
 </body>
