@@ -2,13 +2,14 @@
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background-color: #121212; /* Fondo oscuro */
+    background: linear-gradient(180deg, #0d0d0d, #121212); /* Fondo oscuro con degradado */
     color: #ffffff; /* Texto blanco */
 }
 
 header {
     background-color: #1e1e1e; /* Fondo del header */
     padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
 }
 
 nav ul {
@@ -28,7 +29,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ffffff; /* Cambia a blanco al pasar el cursor */
+    color: #00ff6a; /* Verde al pasar el cursor */
 }
 
 /* Sección Sobre mí */
@@ -56,6 +57,9 @@ nav ul li a:hover {
     text-align: center;
     font-size: 2rem;
     color: #ffd700; /* Amarillo para el título */
+    border-bottom: 2px solid #00ff6a; /* Línea verde debajo del título */
+    display: inline-block;
+    padding-bottom: 0.5rem;
 }
 
 .proyecto {
@@ -94,13 +98,30 @@ nav ul li a:hover {
 
 .redes-sociales a {
     text-decoration: none;
-    color: #ffd700; /* Amarillo para enlaces */
+    color: #00ff6a; /* Verde para enlaces */
     font-size: 1.2rem;
     transition: color 0.3s ease;
 }
 
 .redes-sociales a:hover {
-    color: #ffffff; /* Cambia a blanco al pasar el cursor */
+    color: #ffd700; /* Cambia a amarillo al pasar el cursor */
+}
+
+/* Botones */
+button {
+    background-color: #00ff6a; /* Verde para botones */
+    color: #121212; /* Texto oscuro */
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ffd700; /* Amarillo al pasar el cursor */
+    color: #121212; /* Texto oscuro */
 }
 
 /* Footer */
