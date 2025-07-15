@@ -1,0 +1,112 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Fondo oscuro */
+    color: #ffffff; /* Texto blanco */
+}
+
+header {
+    background-color: #1e1e1e; /* Fondo del header */
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffd700; /* Amarillo para enlaces */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffffff; /* Cambia a blanco al pasar el cursor */
+}
+
+/* Sección Sobre mí */
+#sobre-mi {
+    text-align: center;
+    padding: 2rem;
+}
+
+#sobre-mi h1 {
+    font-size: 2.5rem;
+    color: #ffd700; /* Amarillo para el título */
+}
+
+#sobre-mi p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Sección Proyectos */
+#proyectos {
+    padding: 2rem;
+}
+
+#proyectos h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #ffd700; /* Amarillo para el título */
+}
+
+.proyecto {
+    background-color: #1e1e1e; /* Fondo oscuro para proyectos */
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 8px;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.proyecto h3 {
+    color: #ffd700; /* Amarillo para subtítulos */
+}
+
+.proyecto p {
+    color: #ffffff; /* Texto blanco */
+}
+
+/* Sección Contacto */
+#contacto {
+    text-align: center;
+    padding: 2rem;
+}
+
+#contacto h2 {
+    font-size: 2rem;
+    color: #ffd700; /* Amarillo para el título */
+}
+
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.redes-sociales a {
+    text-decoration: none;
+    color: #ffd700; /* Amarillo para enlaces */
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.redes-sociales a:hover {
+    color: #ffffff; /* Cambia a blanco al pasar el cursor */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #1e1e1e; /* Fondo oscuro */
+    color: #ffffff; /* Texto blanco */
+}
