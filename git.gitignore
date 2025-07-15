@@ -29,3 +29,5 @@ build/
 
 # Vite specific files
 .vite/
+
+venv/
