@@ -1,56 +1,131 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="/docs/assets/css/base.css">
-    <link rel="stylesheet" href="/docs/assets/css/layout.css">
-    <link rel="stylesheet" href="/docs/assets/css/components.css">
-    <link rel="stylesheet" href="/docs/assets/css/utilities.css">
-    <link rel="stylesheet" href="/docs/assets/css/themes/light.css" id="themeStylesheet">
-    
+    <title>Portafolio - Juancho</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <script defer src="./script.js"></script>
 </head>
 <body>
-    <header>
-        <!-- Include header component -->
-        <div id="header"></div>
+    <!-- Header -->
+    <header class="header">
+        <nav>
+            <h1 class="logo">Juancho</h1>
+            <ul class="nav-links">
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#about">Sobre mí</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#education">Educación</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
-    
-    <main>
-        <section id="hero">
-            <!-- Include hero component -->
-            <div id="heroSection"></div>
-        </section>
-        
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Welcome to my portfolio! Here you can find information about my professional journey and projects.</p>
-            <a href="/docs/pages/about.html" class="btn">Learn More</a>
-        </section>
-        
-        <section id="projects">
-            <h2>Projects</h2>
-            <div id="projectCards"></div>
-            <a href="/docs/pages/projects.html" class="btn">View All Projects</a>
-        </section>
-        
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>If you'd like to get in touch, feel free to reach out!</p>
-            <a href="/docs/pages/contact.html" class="btn">Contact Me</a>
-        </section>
-    </main>
-    
-    <footer>
-        <!-- Include footer component -->
-        <div id="footer"></div>
-    </footer>
 
-    <script src="/docs/assets/js/main.js"></script>
-    <script src="/docs/assets/js/nav.js"></script>
-    <script src="/docs/assets/js/theme.js"></script>
-    <script src="/docs/assets/js/animations.js"></script>
-    <script src="/docs/assets/js/data.js"></script>
+    <!-- Hero -->
+    <section id="hero" class="hero">
+        <div class="hero-text">
+            <h2>Hola, soy <span>Juancho</span></h2>
+            <p>Desarrollador enfocado en Machine Learning y Data Science</p>
+            <a href="#contact" class="btn">Contáctame</a>
+        </div>
+        <div class="hero-img">
+            <img src="./images/profile.jpg" alt="Foto de perfil">
+        </div>
+    </section>
+
+    <!-- Sobre mí -->
+    <section id="about" class="about">
+        <h2>Sobre mí</h2>
+        <p>Soy un apasionado por la tecnología, especializado en Python, Machine Learning y desarrollo backend. Busco crear soluciones innovadoras y eficientes.</p>
+    </section>
+
+    <!-- Habilidades -->
+    <section id="skills" class="skills">
+        <h2>Habilidades</h2>
+        <div class="skill-list">
+            <div class="skill">Python</div>
+            <div class="skill">Machine Learning</div>
+            <div class="skill">HTML & CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Git & GitHub</div>
+            <div class="skill">Data Analysis</div>
+        </div>
+    </section>
+
+    <!-- Educación -->
+    <section id="education" class="education">
+        <h2>Educación</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <span>2025</span> Carrera de Data Scientist con Python - Platzi
+            </div>
+            <div class="timeline-item">
+                <span>2024</span> Curso de Programación en Python
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="projects" class="projects">
+        <h2>Proyectos</h2>
+        <div class="project-grid">
+            <!-- Ejemplo de tarjeta de proyecto -->
+            <div class="project-card destacado">
+                <img src="./images/project1.jpg" alt="Proyecto 1">
+                <h3>Proyecto Destacado 1</h3>
+                <p>Descripción breve del proyecto.</p>
+                <a href="#" target="_blank" class="btn">Ver código</a>
+            </div>
+            <!-- Repetir más tarjetas -->
+            <div class="project-card">
+                <img src="./images/project2.jpg" alt="Proyecto 2">
+                <h3>Proyecto 2</h3>
+                <p>Descripción breve del proyecto.</p>
+                <a href="#" target="_blank" class="btn">Ver código</a>
+            </div>
+            <!-- Añadir más tarjetas según necesidad -->
+        </div>
+    </section>
+
+    <!-- Blog -->
+    <section id="blog" class="blog">
+        <h2>Blog</h2>
+        <div class="blog-grid">
+            <div class="blog-card">
+                <img src="./images/blog1.jpg" alt="Artículo 1">
+                <h3>Artículo 1</h3>
+                <p>Descripción corta del artículo.</p>
+                <a href="#" target="_blank" class="btn">Leer más</a>
+            </div>
+            <div class="blog-card">
+                <img src="./images/blog2.jpg" alt="Artículo 2">
+                <h3>Artículo 2</h3>
+                <p>Descripción corta del artículo.</p>
+                <a href="#" target="_blank" class="btn">Leer más</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contact" class="contact">
+        <h2>Contacto</h2>
+        <a href="https://www.linkedin.com" target="_blank" class="btn">Ir a LinkedIn</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Juancho. Todos los derechos reservados.</p>
+        <div class="socials">
+            <a href="#">GitHub</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
 </body>
 </html>
+q
