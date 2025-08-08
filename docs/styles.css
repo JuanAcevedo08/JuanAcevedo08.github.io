@@ -1,10 +1,10 @@
 /* ===== Variables de Estilo ===== */
 :root {
-    --color-primary: #0a1393;
+    --color-primary: #043a98;
     --color-secondary: #00a699;
     --color-bg: #f1f1f1;
     --color-text: #333;
-    --color-white: #fff;
+    --color-white: #fefefe;
     --color-dark: #222;
     --font-main: 'Poppins', sans-serif;
 }
@@ -117,7 +117,6 @@ section h2 {
     font-size: 2rem;
     color: var(--color-dark);
 }
-
 /* ===== Habilidades ===== */
 .skills .skill-list {
     display: flex;
@@ -150,6 +149,13 @@ section h2 {
     margin-bottom: 1rem;
     border-left: 4px solid var(--color-primary);
 }
+
+.edu-description {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 5px;
+}
+
 
 /* ===== Proyectos ===== */
 .project-grid {
