@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Blog | Regresión Lineal</title>
+  <meta name="description" content="Explicación clara y profesional de la regresión lineal." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/blogs.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="site-title">Blog De Regresión Logistica</h1>
+      <nav class="site-nav">
+        <a class="btn btn-home" href="../index.html" aria-label="Volver al portafolio">← Volver al Home</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container article-container" role="main">
+    <article class="post">
+      <header class="post-header">
+        <p class="post-tag">Machine Learning</p>
+        <h2 class="post-title">Regresión Logistica: Fundamentos y Aplicación</h2>
+        <p class="post-meta">Publicado el <time datetime="2025-08-20">22 Agosto 2025</time> · Autor: Juan Acevedo</p>
+      </header>
+
+      <section class="post-section">
+        <h3>¿Qué es la Regresión Logistica?</h3>
+        <p>
+            
+        </p>
+      </section>
+
+      <section class="post-section">
+        <h3>Modelo Matemático</h3>
+        <p>
+          En su forma simple, el modelo se expresa como:1 / (1 + e^-z) donde z = β₀ + β₁x , donde β₀ es el intercepto, β₁ la pendiente
+          y lo que busca es ajustar la supercicie para que den la probabilidad lo mas exacto posible y con esa probabilidad si > 0.5 = 1 de lo contrario = 0
+        </p>
+      </section>
+
+      <section class="post-section code-demo">
+        <h3>Ejemplo en Python (Scikit-Learn)</h3>
+        <pre><code class="code-block">from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy
+
+# Datos de ejemplo
+ = []
+y = [0, 0, 0, 1, 1]
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+modelo = LinearRegression()
+modelo.fit(X_train, y_train)
+
+pred = modelo.predict(X_test)
+print("Coeficiente:", modelo.coef_[0])
+print("Intercepto:", modelo.intercept_)
+print("MSE:", mean_squared_error(y_test, pred))</code></pre>
+      </section>
+
+      <section class="post-section">
+        <h3>Buenas Prácticas</h3>
+        <ul class="best-practices">
+          <li>Normalizar o estandarizar si las escalas son muy diferentes.</li>
+          <li>Revisar multicolinealidad (VIF) en modelos multivariados.</li>
+          <li>Analizar residuos para validar supuestos.</li>
+          <li>Usar métricas adicionales: R² ajustado, MAE, MSE.</li>
+          <li>Revisar correlaciones.</li>
+        </ul>
+      </section>
+
+      <section class="post-section">
+        <h3>Limitaciones</h3>
+        <p>
+          Asume linealidad, homocedasticidad y ausencia de correlación en errores. Cuando estas condiciones no se cumplen,
+          el rendimiento y la interpretabilidad se degradan.
+        </p>
+      </section>
+
+      <footer class="post-footer">
+        <a class="btn btn-primary" href="../index.html">← Regresar al Portafolio</a>
+      </footer>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2025 Juan Acevedo · Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>
