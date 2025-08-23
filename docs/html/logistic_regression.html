@@ -31,7 +31,7 @@
       <section class="post-section">
         <h3>¿Qué es la Regresión Logistica?</h3>
         <p>
-            
+          es un modelo matemático que surge del intento de utilizar la regresión lineal para predecir valores, pero en lugar de obtener un valor continuo, se transforma en una probabilidad. A través de diversas herramientas matemáticas se desarrolló lo que hoy conocemos como la <strong>función sigmoide</strong>, la cual permite convertir la salida de la regresión lineal en una probabilidad entre 0 y 1, lo que nos ayuda a <strong>clasificar</strong> principalmente entre dos categorías. Este modelo puede incorporar múltiples variables; sin embargo, a menudo se ilustra con dos por simplicidad. La <strong>función de pérdida</strong> utilizada es la entropía cruzada: <code>L(ŷ, y) = - (y · log(ŷ) + (1-y) · log(1-ŷ))</code>, donde se mide la diferencia entre el valor real y el valor predicho dependiendo de la clase. El modelo se optimiza mediante <strong>descenso del gradiente</strong>, comenzando con valores iniciales para los parámetros (<em>betas</em>) y ajustándolos en cada iteración hasta que el gradiente tienda a 0, buscando así <strong>minimizar el error lo máximo posible</strong>.
         </p>
       </section>
 
@@ -46,30 +46,35 @@
       <section class="post-section code-demo">
         <h3>Ejemplo en Python (Scikit-Learn)</h3>
         <pre><code class="code-block">from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import accuracy
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
 
 # Datos de ejemplo
- = []
-y = [0, 0, 0, 1, 1]
+horas_sueño = [6, 6, 7, 9, 10]
+felicidad = [0, 0, 0, 1, 1] #Donde 0 = No feliz , 1 = Feliz
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(horas_sueño, felicidad, test_size=0.2, random_state=42)
 
 modelo = LinearRegression()
 modelo.fit(X_train, y_train)
 
 pred = modelo.predict(X_test)
+
+Este modelo tiene una ventaja y también tiene coeficientes interpretables
+
 print("Coeficiente:", modelo.coef_[0])
 print("Intercepto:", modelo.intercept_)
-print("MSE:", mean_squared_error(y_test, pred))</code></pre>
+print("Accuracy:", accuracy_score(y_test, pred))</code></pre>
       </section>
 
       <section class="post-section">
         <h3>Buenas Prácticas</h3>
         <ul class="best-practices">
           <li>Normalizar o estandarizar si las escalas son muy diferentes.</li>
-          <li>Revisar multicolinealidad (VIF) en modelos multivariados.</li>
+          <li>Revisar multicolinealidad .</li>
           <li>Analizar residuos para validar supuestos.</li>
-          <li>Usar métricas adicionales: R² ajustado, MAE, MSE.</li>
+          <li>Datos balanceados (50%, 50%).</li>
+          <li>Usar métricas como accuracy_score .</li>
           <li>Revisar correlaciones.</li>
         </ul>
       </section>
@@ -77,8 +82,7 @@ print("MSE:", mean_squared_error(y_test, pred))</code></pre>
       <section class="post-section">
         <h3>Limitaciones</h3>
         <p>
-          Asume linealidad, homocedasticidad y ausencia de correlación en errores. Cuando estas condiciones no se cumplen,
-          el rendimiento y la interpretabilidad se degradan.
+          Asume linealidad, tiene a overfitting si tiene muchas caracteristicas, la multicolonealidad lo afecta y los datos desbalanceados
         </p>
       </section>
 
