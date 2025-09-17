@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificaciones - Portafolio</title>
+    <link rel="stylesheet" href="../css/certificaciones.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="stars-bg">
+        <canvas id="starsCanvas"></canvas>
+    </div>
+    <header class="special-header">
+        <div class="special-header-bg"></div>
+        <div class="special-header-content">
+            <span class="special-header-icon"><i class="fas fa-certificate"></i></span>
+            <span class="special-header-title">Certificaciones</span>
+            <a class="special-header-home" href="../index.html"><i class="fas fa-home"></i> Home</a>
+        </div>
+        <svg class="special-header-svg" width="100%" height="32" viewBox="0 0 1440 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,16 C360,48 1080,-16 1440,16 L1440,32 L0,32 Z" fill="#00ffe7" fill-opacity="0.13"/></svg>
+    </header>
+    <div class="cert-container">
+        <div class="cert-title">Certificaciones</div>
+        <div class="cert-list">
+            <div class="cert-item">
+                <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+                <h4>Matematicas para ML (Ruta)</h4>
+                <span class="cert-date">2025 </span>
+                <p>Certificion de matematicas para ML at Platzi</p>
+                <a class="cert-cred-link" href="https://platzi.com/p/jdjuandavida/ruta/13491-matematicas-machine-learning/diploma/detalle/" target="_blank" rel="noopener">
+                    <span class="cred-icon"><i class="fas fa-external-link-alt"></i></span> Ver Credencial
+                </a>
+            </div>
+            <div class="cert-item">
+                <div class="cert-icon"><i class="fas fa-rocket"></i></div>
+                <h4>Machine Learning and Deep Learning (Ruta)</h4>
+                <span class="cert-date">2024 - 2026</span>
+                <p>Uso de Machine Learning y Deep Learning para la solucion de problemas</p>
+                <a class="cert-cred-link" href="https://www.deeplearning.ai/credentials/DL-EXAMPLE" target="_blank" rel="noopener">
+                    <span class="cred-icon"><i class="fas fa-external-link-alt"></i></span> Ver Credencial
+                </a>
+            </div>
+            <div class="cert-item">
+                <div class="cert-icon"><i class="fas fa-star"></i></div>
+                <h4>Python (Curso)</h4>
+                <span class="cert-date">2025</span>
+                <p>Curso intensivo donde aprendí manejo de python y Programacion Orientada a Objetos con python</p>
+                <a class="cert-cred-link" href="https://platzi.com/p/jdjuandavida/curso/10002-python/diploma/detalle/" target="_blank" rel="noopener">
+                    <span class="cred-icon"><i class="fas fa-external-link-alt"></i></span> Ver Credencial
+                </a>
+            </div>
+            <div class="cert-item">
+                <div class="cert-icon"><i class="fas fa-meteor"></i></div>
+                <h4>Prompt Engineering (Curso)</h4>
+                <span class="cert-date">2024</span>
+                <p>Curso donde adquirí concomientos en como utilizar llms de manera efectiva para obtener lo que se busca</p>
+                <a class="cert-cred-link" href="https://juanacevedo08.github.io/image/Certificado-CTC_page-0001.jpg" target="_blank" rel="noopener">
+                    <span class="cred-icon"><i class="fas fa-external-link-alt"></i></span> Ver Credencial
+                </a>
+            </div>
+        </div>
+    </div>
+    <script>
+    // Fondo animado de estrellas
+    const canvas = document.getElementById('starsCanvas');
+    if(canvas) {
+        const ctx = canvas.getContext('2d');
+        let w = window.innerWidth, h = window.innerHeight;
+        canvas.width = w;
+        canvas.height = h;
+        let stars = Array.from({length: 120}, () => ({
+            x: Math.random() * w,
+            y: Math.random() * h,
+            r: Math.random() * 1.5 + 0.5,
+            d: Math.random() * 0.5 + 0.2
+        }));
+        function drawStars() {
+            ctx.clearRect(0,0,w,h);
+            for(const s of stars) {
+                ctx.beginPath();
+                ctx.arc(s.x, s.y, s.r, 0, 2 * Math.PI);
+                ctx.fillStyle = '#00ffe7';
+                ctx.shadowColor = '#00ffe7';
+                ctx.shadowBlur = 8;
+                ctx.fill();
+            }
+        }
+        function animateStars() {
+            for(const s of stars) {
+                s.y += s.d;
+                if(s.y > h) { s.y = 0; s.x = Math.random() * w; }
+            }
+            drawStars();
+            requestAnimationFrame(animateStars);
+        }
+        animateStars();
+        window.addEventListener('resize', () => {
+            w = window.innerWidth; h = window.innerHeight;
+            canvas.width = w; canvas.height = h;
+        });
+    }
+    </script>
+    <script>
+    // Evita que el efecto hover quede pegado en los enlaces de credencial
+    document.querySelectorAll('.cert-cred-link').forEach(link => {
+        link.addEventListener('click', function() {
+            this.blur();
+        });
+    });
+    </script>
+</body>
+</html>
