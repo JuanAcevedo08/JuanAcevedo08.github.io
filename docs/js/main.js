@@ -58,8 +58,25 @@ class PortfolioApp {
     // Project cards interaction
     const projectCards = document.querySelectorAll('.project-card');
     projectCards.forEach(card => {
-      card.addEventListener('click', () => {
-        this.handleProjectClick(card);
+      const content = card.querySelector('.project-content');
+      if (content) {
+        content.addEventListener('click', (event) => {
+          // Si el click proviene de .project-links o sus hijos, no abrir el modal
+          if (event.target.closest('.project-links')) {
+            return;
+          }
+          this.handleProjectClick(card);
+        });
+      }
+      // Evitar que los enlaces dentro de project-links abran el modal
+      const links = card.querySelectorAll('.project-links a');
+      links.forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.stopPropagation();
+          // Evitar que el modal se abra y solo abrir el enlace
+          e.preventDefault();
+          window.open(link.href, '_blank');
+        });
       });
     });
     

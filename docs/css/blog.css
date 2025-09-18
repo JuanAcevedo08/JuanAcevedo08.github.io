@@ -1,3 +1,23 @@
+.blog-sidebar-index ul li a {
+    display: block;
+    color: #fff;
+    background: linear-gradient(90deg, #ff00cc30 0%, #33339930 100%);
+    padding: 8px 14px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1.04rem;
+    text-decoration: none;
+    box-shadow: 0 0 8px #ff00cc40;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+    margin: 0 -4px;
+}
+.blog-sidebar-index ul li a:hover, .blog-sidebar-index ul li a:focus {
+    background: linear-gradient(90deg, #ff00cc 0%, #333399 100%);
+    color: #fff;
+    box-shadow: 0 0 18px #ff00cc, 0 0 32px #33339980 inset;
+    text-shadow: 0 0 6px #fff, 0 0 12px #ff00cc;
+    transform: scale(1.06) translateX(2px);
+}
 .blog-sidebar-index {
     position: fixed;
     top: 120px;

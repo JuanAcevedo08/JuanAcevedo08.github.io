@@ -1,3 +1,21 @@
+.cert-source {
+    margin: 0 0 8px 0;
+    color: #b2fefa;
+    font-size: 0.98rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    opacity: 0.85;
+    letter-spacing: 0.2px;
+}
+.cert-source i {
+    color: #00ffe7;
+    font-size: 1.08em;
+    margin-right: 3px;
+    filter: drop-shadow(0 0 4px #00ffe7);
+}
 /* Botón/enlace de credencial en cada certificado */
 .cert-cred-link {
     display: inline-flex;
