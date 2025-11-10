@@ -125,8 +125,34 @@ body {
 .section-subtitle {
   font-size: 1.1rem;
   color: var(--text-secondary);
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
+  line-height: 1.8;
+}
+
+.github-link {
+  color: var(--accent-primary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+
+.github-link:hover {
+  color: var(--text-primary);
+  background: var(--accent-gradient);
+  box-shadow: var(--glow-primary);
+  padding: 3px 8px;
+  transform: translateY(-2px);
+}
+
+.github-link i {
+  transition: transform 0.3s ease;
+}
+
+.github-link:hover i {
+  transform: rotate(360deg);
 }
 
 /* ===== BOTONES ===== */
