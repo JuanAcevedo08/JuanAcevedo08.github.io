@@ -89,9 +89,11 @@
     .join("");
 
   /* ---------- Skills ---------- */
+  // Icons: try the local copy in assets/icons/ first, then the Devicon CDN, then a monogram.
+  const CDN = "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/";
   const skillIcon = (s) =>
     s.icon
-      ? `<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/${esc(s.icon)}.svg" alt="" loading="lazy" width="22" height="22" onerror="this.replaceWith(Object.assign(document.createElement('b'),{textContent:'${esc(s.name).charAt(0)}'}))" />`
+      ? `<img src="assets/icons/${esc(s.icon.split("/").pop())}.svg" data-cdn="${esc(CDN + s.icon)}.svg" data-letter="${esc(s.name.charAt(0))}" alt="" loading="lazy" width="22" height="22" />`
       : `<b>${esc(s.name.charAt(0))}</b>`;
 
   $("#skillsGrid").innerHTML = (P.skills || [])
@@ -113,6 +115,15 @@
       </article>`
     )
     .join("");
+
+  document.querySelectorAll("#skillsGrid img[data-cdn]").forEach((img) => {
+    img.addEventListener("error", function onErr() {
+      if (img.dataset.cdn && img.src !== img.dataset.cdn) { img.src = img.dataset.cdn; img.dataset.cdn = ""; return; }
+      const b = document.createElement("b");
+      b.textContent = img.dataset.letter;
+      img.replaceWith(b);
+    });
+  });
 
   /* ---------- Projects ---------- */
   const total = projects.length;

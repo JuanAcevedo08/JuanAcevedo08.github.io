@@ -12,7 +12,7 @@ PORTFOLIO.profile = {
   level: "Junior",
 
   // Main phrase in the hero. Swap it for your favourite.
-  tagline: "Beyond the limits of data",
+  tagline: "Exploring the universe, one model at a time",
 
   // Short line under your name.
   intro:

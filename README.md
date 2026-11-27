@@ -46,7 +46,7 @@ El número de misión, los filtros y los contadores del inicio se calculan solos
 
 ### ➕ Una skill
 En `docs/data/skills.js` agrega `{ name: "MLflow", icon: "...", level: "learning" }` dentro de la categoría que quieras.
-- `icon` es opcional: busca el nombre en https://devicon.dev (ej. `"docker/docker-original"`). Si no hay ícono, se muestra la inicial.
+- `icon` es opcional: busca el nombre en https://devicon.dev (ej. `"docker/docker-original"`). Primero se busca una copia local en `docs/assets/icons/` (ej. `docker-original.svg`); si no está, se carga desde internet; y si no hay ícono, se muestra la inicial.
 - `level`: `"core"` (lo manejo) o `"learning"` (lo estoy aprendiendo).
 - Para una **categoría nueva**, copia un bloque `{ category, description, items: [...] }` completo.
 

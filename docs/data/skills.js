@@ -3,6 +3,8 @@
    - Add a skill: add { name, icon } to a category's list.
    - Add a category: copy a whole { ... } block.
    - icon: a Devicon path (https://devicon.dev), e.g. "python/python-original".
+           If docs/assets/icons/python-original.svg exists it is used; otherwise
+           it loads from the Devicon CDN.
            Leave it out and a monogram is shown instead.
    - level: "core" (I use it a lot) or "learning" (I'm getting into it).
    ============================================================ */
@@ -57,7 +59,7 @@ PORTFOLIO.skills = [
     items: [
       { name: "Git", icon: "git/git-original", level: "core" },
       { name: "GitHub", icon: "github/github-original", level: "core" },
-      { name: "Linux / WSL", icon: "linux/linux-original", level: "core" },
+      { name: "Linux / WSL", icon: "linux/linux-plain", level: "core" },
       { name: "Jupyter", icon: "jupyter/jupyter-original", level: "core" },
       { name: "English", level: "core" }
     ]
