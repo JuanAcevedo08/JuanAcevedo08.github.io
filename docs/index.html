@@ -1,621 +1,204 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="en">
 <head>
-    <!-- El modo claro/oscuro funciona. Haz clic en el botón flotante de la luna/sol para cambiar el tema. -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio - Machine Learning Engineer</title>
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
-    
-    <!-- CSS Files -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/neural-network.css">
-    <link rel="stylesheet" href="css/responsive.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Juan Acevedo · Machine Learning Engineer</title>
+  <meta name="description" content="Portfolio of Juan David Acevedo Neira, Machine Learning Engineer. Projects in machine learning, deep learning and model deployment." />
+  <meta name="theme-color" content="#04050b" />
+  <meta property="og:title" content="Juan Acevedo · Machine Learning Engineer" />
+  <meta property="og:description" content="Beyond the limits of data. ML projects, skills and learning path." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%2304050b'/%3E%3Cellipse cx='32' cy='32' rx='28' ry='9' fill='none' stroke='%23ffb547' stroke-width='3' transform='rotate(-25 32 32)'/%3E%3Ccircle cx='32' cy='32' r='12' fill='%234fd1c5'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/main.css" />
 </head>
 <body>
-    <!-- Neural Network Background -->
-    <div class="neural-bg" id="neuralBg">
-    <canvas id="neuralCanvas" tabindex="-1" aria-hidden="true"></canvas>
-    </div>
+  <canvas id="cosmos" aria-hidden="true"></canvas>
+  <div class="sky-shift" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
 
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <span class="logo-text">MI<span class="accent">.</span>Portfolio</span>
-            </div>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#home" class="nav-link">Inicio</a></li>
-                <li><a href="#about" class="nav-link">Sobre Mí</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Proyectos</a></li>
-                <li><a href="#roadmap" class="nav-link">Roadmap</a></li>
-            </ul>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
+  <header class="nav" id="top">
+    <a class="nav__brand" href="#hero" aria-label="Back to top">
+      <span class="nav__logo" data-bind="initials">JA</span>
+      <span class="nav__name" data-bind="shortName">Juan Acevedo</span>
+    </a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#missions">Missions</a>
+      <a href="#journey">Journey</a>
+      <a href="#contact">Contact</a>
     </nav>
+    <div class="nav__clock mono" title="Local time"><span class="dot"></span><span id="clock">--:--</span></div>
+    <button class="nav__toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+  </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-avatar">
-                    <div class="avatar-placeholder">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <div class="avatar-glow"></div>
-                </div>
-                <h1 class="hero-name">Juan Acevedo</h1>
-                <h2 class="hero-title">Machine Learning Engineer <span class="badge">Beginner/Junior</span></h2>
-                <p class="hero-description">
-                    Creador de solcuiones utilizando los datos e inteligencia artificial
-                    para resolver situaciones la vida cotideana 
-                </p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">
-                        <i class="fas fa-code"></i>
-                        Ver Proyectos
-                    </a>
-                    <a href="https://www.linkedin.com/in/juan-acevedo-ba0242339/" target="_blank" class="btn btn-secondary">
-                        <i class="fas fa-user"></i>
-                        Contacto    
-                    </a>
-                    <a href="html/blog.html" class="btn btn-secondary">
-                        <i class="fas fa-blog"></i>
-                        Blog
-                    </a>
-                    <a href="html/certificaciones.html" class="btn btn-secondary">
-                        <i class="fas fa-certificate"></i>
-                        Certificaciones
-                    </a>
-                </div>
-                <div class="scroll-indicator">
-                    <div class="scroll-arrow">
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                </div>
-            </div>
+  <main>
+    <!-- 00 · HERO -->
+    <section class="hero" id="hero">
+      <div class="hero__text">
+        <p class="eyebrow mono reveal"><span class="pulse"></span><span data-bind="availability"></span></p>
+        <h1 class="hero__name reveal">
+          <span class="hero__first" data-bind="firstName"></span>
+          <span class="hero__last" data-bind="lastName"></span>
+        </h1>
+        <p class="hero__role mono reveal">
+          <span class="caret">&gt;</span> <span id="typed" data-bind="role"></span><span class="cursor">_</span>
+        </p>
+        <p class="hero__tagline reveal" data-bind="tagline"></p>
+        <p class="hero__intro reveal" data-bind="intro"></p>
+        <div class="hero__cta reveal">
+          <a class="btn btn--primary" href="#missions">Explore missions</a>
+          <a class="btn btn--ghost" href="#contact">Open a channel</a>
+          <a class="btn btn--ghost" id="resumeBtn" hidden target="_blank" rel="noopener">Resume</a>
         </div>
+        <dl class="hero__stats reveal" id="stats"></dl>
+      </div>
+
+      <div class="hero__orbit reveal" aria-hidden="true">
+        <div class="orbit orbit--1"><span class="planet planet--a" data-orbit-label="0"></span></div>
+        <div class="orbit orbit--2"><span class="planet planet--b" data-orbit-label="1"></span></div>
+        <div class="orbit orbit--3"><span class="planet planet--c" data-orbit-label="2"></span></div>
+        <div class="avatar" id="avatar"></div>
+      </div>
+
+      <a class="scroll-cue mono" href="#about">scroll to launch <span>↓</span></a>
     </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Sobre Mí</h2>
-                <div class="title-underline"></div>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        Soy un jovén de 17 años que se interesó y ha venido trabajando fuertemente
-                        en aprender lo mas que se pueda respecto a <strong>AI y ML </strong>y como está funciona.
-                        y desarrollar solcuones con las herramientas que esta nos ofrece , para 
-                        resolver problemas del día a día 
-                    </p>
-                    <p>
-                        Cada día dedico tiempo a aprender nuevas tecnologías, trabajar en proyectos prácticos y 
-                        mantenerme actualizado con las últimas tendencias en <strong>Data Scien</strong> y 
-                        <strong>Artificial Intelligence</strong>. Mi objetivo es contribuir a soluciones innovadoras 
-                        que generen un impacto real.
-                    </p>
-                </div>
-                <div class="about-highlights">
-                    <div class="highlight-item">
-                        <i class="fas fa-brain"></i>
-                        <span>Enfoque en ML - DL & AI</span>
-                    </div>
-                    <div class="highlight-item">
-                        <i class="fas fa-user"></i>
-                        <span>Curioso</span>
-                    </div>
-                    <div class="highlight-item">
-                        <i class="fas fa-server"></i>
-                        <span>Backend</span>
-                    </div>
-                    <div class="highlight-item">
-                        <i class="fas fa-graduation-cap"></i>
-                        <span>Aprendizaje Continuo</span>
-                    </div>
-                    <div class="highlight-item">
-                        <i class="fas fa-language"></i>
-                        <span>Inglés</span>
-                </div>
-            </div>
-        </div>
+    <!-- 01 · ABOUT -->
+    <section class="section" id="about">
+      <header class="section__head reveal">
+        <p class="section__index mono">01 // about</p>
+        <h2>Ground control <em>to</em> Juan</h2>
+      </header>
+      <div class="about">
+        <div class="about__text reveal" id="aboutText"></div>
+        <aside class="about__card reveal">
+          <p class="mono label">off-orbit · things I love</p>
+          <ul class="interests" id="interests"></ul>
+        </aside>
+      </div>
     </section>
 
-    <!-- Skills Section -->
-    <section class="skills" id="skills">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Skills & Tecnologías</h2>
-                <div class="title-underline"></div>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Machine Learning</h3>
-                    <div class="skill-items">
-                        <div class="skill-item" data-skill="85">
-                            <div class="skill-icon">
-                                <i class="fab fa-python"></i>
-                            </div>
-                            <div class="skill-info">
-                                <h4>Python</h4>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-progress="90"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-skill="75">
-                            <div class="skill-icon">
-                                <i class="fas fa-brain"></i>
-                            </div>
-                            <div class="skill-info">
-                                <h4>Scikit-learn</h4>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-progress="85"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-skill="80">
-                            <div class="skill-icon">
-                                <i class="fas fa-table"></i>
-                            </div>
-                            <div class="skill-info">
-                                <h4>Pandas</h4>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-progress="80"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-skill="70">
-                            <div class="skill-icon">
-                                <i class="fas fa-calculator"></i>
-                            </div>
-                            <div class="skill-info">
-                                <h4>NumPy</h4>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-progress="80"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Deep Learning</h3>
-                    <div class="skill-items">
-                        <div class="skill-item" data-skill="70">
-                            <div class="skill-icon">
-                                <i class="fas fa-file"></i>
-                            </div>
-                            <div class="skill-info">
-                                <h4>PyTorch</h4>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-progress="60"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-skill="65">
-                            <div class="skill-icon">
-                                <i class="fas fa-file"></i>
-                            </div>
-                            <div class="skill-info">
-                                <h4>TensorFlow</h4>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-progress="60"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Backend & APIs</h3>
-                    <div class="skill-items">
-                        <div class="skill-item" data-skill="70">
-                            <div class="skill-icon">
-                                <i class="fas fa-rocket"></i>
-                            </div>
-                            <div class="skill-info">
-                                <h4>FastAPI</h4>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-progress="70"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-skill="65">
-                            <div class="skill-icon">
-                                <i class="fas fa-database"></i>
-                            </div>
-                            <div class="skill-info">
-                                <h4>SQL</h4>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-progress="70"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Herramientas</h3>
-                    <div class="skill-items">
-                        <div class="skill-item" data-skill="80">
-                            <div class="skill-icon">
-                                <i class="fab fa-git-alt"></i>
-                            </div>
-                            <div class="skill-info">
-                                <h4>Git</h4>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-progress="80"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-skill="75">
-                            <div class="skill-icon">
-                                <i class="fab fa-github"></i>
-                            </div>
-                            <div class="skill-info">
-                                <h4>GitHub</h4>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-progress="80"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-skill="75">
-                            <div class="skill-icon">
-                                <i class="fas fa-language"></i>
-                            </div>
-                            <div class="skill-info">
-                                <h4>Inglés</h4>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-progress="80"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-skill="70">
-                            <div class="skill-icon">
-                                <i class="fa-brands fa-linux"></i>
-                            </div>
-                            <div class="skill-info">
-                                <h4>WSL (Linux en terminal)</h4>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-progress="70"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- 02 · SKILLS -->
+    <section class="section" id="skills">
+      <header class="section__head reveal">
+        <p class="section__index mono">02 // skills</p>
+        <h2>Tech constellations</h2>
+        <p class="section__lead">Each constellation groups the tools I work with. <span class="legend"><i class="lv lv--core"></i> core <i class="lv lv--learning"></i> learning</span></p>
+      </header>
+      <div class="constellations" id="skillsGrid"></div>
     </section>
 
-    <!-- Projects Section -->
-    <section class="projects" id="projects">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Proyectos</h2>
-                <div class="title-underline"></div>
-                <p class="section-subtitle">
-                    Todos mis proyectos aquí: <a href="https://github.com/JuanAcevedo08?tab=repositories" target="_blank" class="github-link"><i class="fab fa-github"></i> GitHub</a>
-                </p>
-                <p class="section-subtitle" style="margin-top: 10px;">
-                    Algunos proyectos <i class="fas fa-arrow-down"></i>
-                </p>
-            </div>
-            <div class="projects-grid">
-                <!--
-                PERSONALIZA LOS ENLACES DE GITHUB Y DEMO DE CADA PROYECTO:
-                ------------------------------------------------------------------
-                Para que el modal muestre el enlace correcto de GitHub y Demo, agrega los atributos:
-                data-github="URL_DE_TU_REPOSITORIO" y data-demo="URL_DE_TU_DEMO"
-                en cada <div class="project-card" ... >
-
-                Ejemplo:
-                <div class="project-card" data-project="2" data-github="https://github.com/usuario/proyecto2" data-demo="https://midemoespecial.com">
-                    ...
-                </div>
-
-                Así puedes cambiar los links de cada proyecto fácilmente desde el HTML.
-                -->
-                <div class="project-card" data-project="1" data-github="https://github.com/JuanAcevedo08/Machine-Learning-Solutions/tree/main/compra_o_no" data-demo="https://huggingface.co/spaces/JuanAcevedo/shopper" data-description="Este proyecto predice si un cliente comprará usando RandomForest.">
-                    <div class="project-image">
-                        <i class="fas fa-folder"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Predicción precio airbnb NYC</h3>
-                        <p>Proyecto realizado con el dataset de kaggle airbnb y en inglés, en el cual se procesaron los datos se exploraron, limpiaron, analizaron, transformaron, se manejaron outliers, se obtuvieron 5 enteros mas de el r2 promedio para este dataset, adicional a eso se probaron multiples modelos de Machine Learning y finalmente se eligieron los mejores y se optimizaron, se guardó el mejor modelo y realicé una API con FastApi para consumir el modelo finalmente se ralizó el archivo docker para otorga reproducibilidad y se desplegó en Koyeb como nube </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python & POO</span>
-                            <span class="tech-tag">Matplotlib</span>
-                            <span class="tech-tag">Seaborn</span>
-                            <span class="tech-tag">Numpy</span>
-                            <span class="tech-tag">Scikit-learn</span>
-                            <span class="tech-tag">FastApi</span>
-                            <span class="tech-tag">Docker</span>
-                            <span class="tech-tag">Joblib</span>
-                            <span class="tech-tag">Koyeb</span>
-                            <span class="tech-tag">Modelos de ensamble</span>
-                            <span class="tech-tag">Modelos lineales</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/JuanAcevedo08/Airbnb-Repository" class="project-link" target="_blank">
-                                <i class="fab fa-github"></i>
-                                Repositorio
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-glow"></div>
-                </div>
-
-                <div class="project-card" data-project="2" data-github="https://github.com/JuanAcevedo08/Machine-Learning-Solutions/tree/main/compra_o_no" data-demo="https://huggingface.co/spaces/JuanAcevedo/shopper" data-description="Este proyecto predice si un cliente comprará usando RandomForest.">
-                    <div class="project-image">
-                        <i class="fas fa-folder"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>¿Comprará o no un cliente?</h3>
-                        <p>Durante la realización de este proyecto se desarrolló un pipeline completo de Machine Learning. En este proceso se llevó a cabo la exploración y el análisis de los datos, así como la construcción y evaluación de diferentes modelos con el objetivo de lograr una clasificación más precisa. Finalmente, se consolidó un pipeline definitivo empleando el mejor modelo obtenido.Se probaron y compararon diversos algoritmos, incluyendo RandomForestClassifier, KNeighborsClassifier, Regresión Logística, Máquinas de Soporte Vectorial (SVM) y Árboles de Decisión. Además, se aplicaron distintos métodos de preprocesamiento y validación para garantizar la calidad y robustez de los resultados.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Matplotlib</span>
-                            <span class="tech-tag">Seaborn</span>
-                            <span class="tech-tag">Numpy</span>
-                            <span class="tech-tag">Scikit-learn</span>
-                            <span class="tech-tag">Imblearn</span>
-                            <span class="tech-tag">Joblib</span>
-                            <span class="tech-tag">Gradio</span>
-                            <span class="tech-tag">Huggin Face</span>
-                            <span class="tech-tag">Modelos de Clasificacion</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/JuanAcevedo08/Machine-Learning-Solutions/tree/main/compra_o_no" class="project-link" target="_blank">
-                                <i class="fab fa-github"></i>
-                                Repositorio
-                            </a>
-                            <a href="https://huggingface.co/spaces/JuanAcevedo/shopper" class="project-link" target="_blank">
-                                <i class="fa-solid fa-file"></i>
-                                Huggin Face
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-glow"></div>
-                </div>
-
-                <div class="project-card" data-project="3" data-github="https://github.com/JuanAcevedo08/Machine-Learning-Solutions/tree/main/segmentacion_grupo_clustering" data-demo="https://huggingface.co/spaces/JuanAcevedo/Find_clinet" data-description="Este proyecto encuentra similitudes en los clientes.">
-                    <div class="project-image">
-                        <i class="fas fa-folder"></i>
-                    </div>
-                    <div class="project-content" >
-                        <h3>Busqueda de clientes</h3>
-                        <p>En este proyecto se llevó a cabo una clasificación de clientes basada en sus comportamientos, lo que permitió identificar dos grupos distintos dentro de los datos. Para ello, se emplearon diferentes modelos de aprendizaje no supervisado, con el fin de detectar patrones y similitudes que facilitaran la segmentación de los clientes.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Matplotlib</span>
-                            <span class="tech-tag">Seaborn</span>
-                            <span class="tech-tag">Numpy</span>
-                            <span class="tech-tag">Scipy</span>
-                            <span class="tech-tag">Scikit-learn</span>
-                            <span class="tech-tag">itertools</span>
-                            <span class="tech-tag">Joblib</span>
-                            <span class="tech-tag">Gradio</span>
-                            <span class="tech-tag">Huggin Face</span>
-                            <span class="tech-tag">Modelos de Clustering - PCA</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/JuanAcevedo08/Machine-Learning-Solutions/tree/main/segmentacion_grupo_clustering" class="project-link" target="_blank">
-                                <i class="fab fa-github"></i>
-                                Repositorio
-                            </a>
-                            <a href="https://huggingface.co/spaces/JuanAcevedo/Find_clinet" class="project-link" target="_blank">
-                                <i class="fa-solid fa-file"></i>
-                                Huggin Face
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-glow"></div>
-                </div>
-
-                <div class="project-card" data-project="4" data-github="https://github.com/JuanAcevedo08/DeepLearning/blob/main/PyTorchProjects/Clasificador_texto.ipynb" data-demo="https://huggingface.co/spaces/JuanAcevedo/classifier-news" data-description="Este proyecto encuentra similitudes en los clientes.">
-                    <div class="project-image">
-                        <i class="fas fa-folder"></i>
-                    </div>
-                    <div class="project-content" >
-                        <h3>Clasificador de noticias en ingles</h3>
-                        <p>Implemento uso de PyTorchText para procesar textos de el correspondiente dataset de noticias y procesarlas , para luego poder entrenarlo utilizando funciones de entrenamiento y validacion , finalmente alcanzando un alto performance con accuracy de casi 80% y generalizando bastante bien , clasifica tipo de noticias con las que el modelo se entrenó</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">PyTorch</span>
-                            <span class="tech-tag">Joblib</span>
-                            <span class="tech-tag">Gradio</span>
-                            <span class="tech-tag">Huggin Face</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/JuanAcevedo08/DeepLearning/blob/main/PyTorchProjects/Clasificador_texto.ipynb" class="project-link" target="_blank">
-                                <i class="fab fa-github"></i>
-                                Repositorio
-                            </a>
-                            <a href="https://huggingface.co/spaces/JuanAcevedo/classifier-news" class="project-link" target="_blank">
-                                <i class="fa-solid fa-file"></i>
-                                Huggin Face
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-glow"></div>
-                </div>
-
-                <div class="project-card" data-project="5" data-github="https://github.com/JuanAcevedo08/Machine-Learning-Solutions/tree/main/Clasificacion_calidad_caf%C3%A9" data-demo="https://huggingface.co/spaces/JuanAcevedo/coffee-quality-classifier" data-description="El proyecto califica el café dependiendo unas caracteristicas">
-                    <div class="project-image">
-                        <i class="fas fa-folder"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Calificador de café</h3>
-                        <p>En este proyecto se implementó un Árbol de Decisión para predecir la calidad del café a partir de una serie de características globales. Para probar este demo es necesario ingresar ciertas variables numéricas específicas, las cuales se detallan dentro de la aplicación.El modelo fue entrenado con un conjunto de datos reducido obtenido de Kaggle, por lo que su capacidad de generalización es limitada y se recomienda únicamente con fines demostrativos.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Matplotlib</span>
-                            <span class="tech-tag">Seaborn</span>
-                            <span class="tech-tag">Scipy</span>
-                            <span class="tech-tag">Scikit-learn</span>
-                            <span class="tech-tag">Joblib</span>
-                            <span class="tech-tag">Gradio</span>
-                            <span class="tech-tag">Huggin Face</span>
-                            <span class="tech-tag">DecisionTreeClasiffier</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/JuanAcevedo08/Machine-Learning-Solutions/tree/main/Clasificacion_calidad_caf%C3%A9" class="project-link" target="_blank">
-                                <i class="fab fa-github"></i>
-                                Repositorio
-                            </a>
-                            <a href="https://huggingface.co/spaces/JuanAcevedo/coffee-quality-classifier" class="project-link" target="_blank">
-                                <i class="fa-solid fa-file"></i>
-                                Huggin Face
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-glow"></div>
-                </div>
-            </div>
-        </div>
+    <!-- 03 · PROJECTS -->
+    <section class="section" id="missions">
+      <header class="section__head reveal">
+        <p class="section__index mono">03 // projects</p>
+        <h2>Mission log</h2>
+        <p class="section__lead">Real problems, real data, models you can try.</p>
+      </header>
+      <div class="filters reveal" id="filters" role="tablist" aria-label="Filter projects"></div>
+      <div class="missions" id="missionsGrid"></div>
+      <p class="more reveal"><a class="link-arrow" id="allRepos" target="_blank" rel="noopener">All repositories on GitHub →</a></p>
     </section>
 
-    <!-- Learning Roadmap Section -->
-    <section class="roadmap" id="roadmap">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Learning Journey</h2>
-                <div class="title-underline"></div>
-                <p class="section-subtitle">Mi ruta de aprendizaje en Machine Learning y Data Science</p>
-            </div>
-            <div class="roadmap-timeline">
-
-                <div class="timeline-item completed" data-status="completed">
-                    <div class="timeline-marker">
-                        <i class="fas fa-check"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-period">Completado</div>
-                        <h3>Matematicas</h3>
-                        <p>Fundamentos matematicos, Algebra, Algebra Lineal, Estadistica(Inferencia - descriptiva), Probabilidad,Calculo diferencial-Vectorial, </p>
-                        <div class="timeline-skills">
-                            <span class="skill-badge">Calculo</span>
-                            <span class="skill-badge">Algebra</span>
-                            <span class="skill-badge">Estadistica</span>
-                            <span class="skill-badge">Probabilidad</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item completed" data-status="completed">
-                    <div class="timeline-marker">
-                        <i class="fas fa-check"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-period">Completado</div>
-                        <h3>Fundamentos de Python & ML</h3>
-                        <p>Python, POO,Pandas, NumPy, Scikit-learn, análisis exploratorio de datos</p>
-                        <div class="timeline-skills">
-                            <span class="skill-badge">Python</span>
-                            <span class="skill-badge">Pandas</span>
-                            <span class="skill-badge">NumPy</span>
-                            <span class="skill-badge">Scikit-learn</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-item current" data-status="current">
-                    <div class="timeline-marker">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-period">Estudiando Ahora</div>
-                        <h3>APIs & Backend </h3>
-                        <p>FastAPI, , deployment de modelos ML, bases de datos</p>
-                        <div class="timeline-skills">
-                            <span class="skill-badge">FastAPI</span>
-                            <span class="skill-badge">SQL</span>
-                            <span class="skill-badge">Docker</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill" data-progress="80"></div>
-                        </div>
-                    </div>
-                </div>  
-                <div class="timeline-item current" data-status="current">
-                    <div class="timeline-marker">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-period">Estudiando ahora</div>
-                        <h3>Deep Learning</h3>
-                        <p>Redes neuronales, TensorFlow, PyTorch, CNN, RNN, procesamiento de imágenes y texto</p>
-                        <div class="timeline-skills">
-                            <span class="skill-badge">TensorFlow</span>
-                            <span class="skill-badge">PyTorch</span>
-                            <span class="skill-badge">Neural Networks</span>
-                            <span class="skill-badge">Computer Vision</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill" data-progress="0"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-item planned" data-status="planned">
-                    <div class="timeline-marker">
-                        <i class="fas fa-cloud"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-period">Proximo</div>
-                        <h3>MLOps & Cloud</h3>
-                        <p>MLflow, Kubeflow, AWS, para ML, monitoreo de modelos en producción</p>
-                        <div class="timeline-skills">
-                            <span class="skill-badge">MLOps</span>
-                            <span class="skill-badge">AWS</span>
-                            <span class="skill-badge">Kubernetes</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- 04 · JOURNEY -->
+    <section class="section" id="journey">
+      <header class="section__head reveal">
+        <p class="section__index mono">04 // journey</p>
+        <h2>Flight path</h2>
+        <p class="section__lead">Where I've been, where I am, and the next destination.</p>
+      </header>
+      <ol class="trajectory" id="journeyList"></ol>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-text">
-                    <p>&copy; 2025 Juan Acevedo. Construido con pasión e AI 😉💖.<br><span style="font-size:0.95em;opacity:0.8;">Este portafolio es open source bajo <a href="https://opensource.org/licenses/MIT" target="_blank" style="color:#00ffe7;text-decoration:underline;">MIT License</a>.</span></p>
-                </div>
-                <div class="footer-links">
-                    <a href="https://github.com/JuanAcevedo08" target="_blank" class="footer-link">
-                        <i class="fab fa-github"></i>
-                        <span>GitHub</span>
-                    </a>
-                    <a href="https://www.linkedin.com/in/juan-acevedo-ba0242339/" target="_blank" class="footer-link">
-                        <i class="fab fa-linkedin"></i>
-                        <span>LinkedIn</span>
-                    </a>
-                    <a href="https://x.com/JuanAcevedo008" class="footer-link">
-                        <i class="fab fa-x"></i>
-                        <span></span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <!-- 05 · CERTIFICATIONS -->
+    <section class="section" id="certifications">
+      <header class="section__head reveal">
+        <p class="section__index mono">05 // certifications</p>
+        <h2>Mission patches</h2>
+      </header>
+      <div class="patches" id="certsGrid"></div>
+    </section>
 
-    <!-- JavaScript Files -->
-    <script src="js/neural-network.js"></script>
-    <script src="js/animations.js"></script>
-    <script src="js/main.js"></script>
+    <!-- 06 · CONTACT -->
+    <section class="section contact" id="contact">
+      <div class="contact__inner reveal">
+        <p class="section__index mono">06 // contact</p>
+        <h2>Let's build something<br /><span class="grad">out of this world.</span></h2>
+        <p class="section__lead">I'm open to internships, junior roles and collaborations in machine learning. The fastest way to reach me is LinkedIn.</p>
+        <div class="socials" id="socials"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Landing back on Earth: road, farm and a motorcycle -->
+  <footer class="landing">
+    <svg class="landscape" viewBox="0 0 1440 260" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+      <defs>
+        <linearGradient id="hillA" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b1638"/><stop offset="1" stop-color="#0c0a1d"/></linearGradient>
+        <linearGradient id="hillB" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#120f28"/><stop offset="1" stop-color="#07060f"/></linearGradient>
+      </defs>
+      <path d="M0 150 C 200 90, 380 120, 560 105 S 900 70, 1100 110 S 1340 95, 1440 120 L1440 260 L0 260Z" fill="url(#hillA)"/>
+      <!-- windmill -->
+      <g class="windmill" transform="translate(1120 64)">
+        <path d="M-5 0 L5 0 L9 52 L-9 52Z" fill="#0c0a1d"/>
+        <g class="blades"><rect x="-1.5" y="-30" width="3" height="30" fill="#0c0a1d"/><rect x="-1.5" y="-30" width="3" height="30" fill="#0c0a1d" transform="rotate(90)"/><rect x="-1.5" y="-30" width="3" height="30" fill="#0c0a1d" transform="rotate(180)"/><rect x="-1.5" y="-30" width="3" height="30" fill="#0c0a1d" transform="rotate(270)"/><circle r="4" fill="#ffb547"/></g>
+      </g>
+      <!-- barn -->
+      <g transform="translate(250 92)">
+        <path d="M0 40 L0 18 L28 0 L56 18 L56 40Z" fill="#0c0a1d"/>
+        <rect x="22" y="22" width="12" height="18" fill="#ffb547" opacity=".85"/>
+        <rect x="8" y="16" width="6" height="6" fill="#ffb547" opacity=".55"/>
+        <rect x="64" y="6" width="14" height="34" rx="7" fill="#0c0a1d"/>
+      </g>
+      <path d="M0 190 C 240 160, 520 175, 760 168 S 1200 150, 1440 175 L1440 260 L0 260Z" fill="url(#hillB)"/>
+      <!-- fence -->
+      <g stroke="#1d1a3a" stroke-width="3">
+        <path d="M40 196 L420 186" /><path d="M40 206 L420 196" />
+      </g>
+      <!-- road -->
+      <rect x="0" y="222" width="1440" height="38" fill="#05040b"/>
+      <path d="M0 241 L1440 241" stroke="#ffb547" stroke-width="2" stroke-dasharray="26 22" opacity=".5"/>
+    </svg>
+    <div class="rider" aria-hidden="true">
+      <svg viewBox="0 0 120 60" width="96" height="48"><use href="#moto-shape"/></svg>
+    </div>
+    <div class="landing__bar">
+      <p class="mono">© <span id="year"></span> <span data-bind="name"></span> · built with data &amp; stardust</p>
+      <p class="mono hint">psst: type <kbd>moto</kbd> or <kbd>farm</kbd></p>
+      <a class="mono" href="#hero">back to orbit ↑</a>
+    </div>
+  </footer>
+
+  <!-- Shared SVG symbols -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="moto-shape" viewBox="0 0 120 60">
+      <circle cx="24" cy="44" r="13" fill="none" stroke="currentColor" stroke-width="4"/>
+      <circle cx="96" cy="44" r="13" fill="none" stroke="currentColor" stroke-width="4"/>
+      <path d="M24 44 L48 26 L72 26 L80 16 L90 16 M72 26 L96 44 M48 26 L58 40 L76 40" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M44 22 Q56 10 72 20 Z" fill="currentColor"/>
+      <circle cx="54" cy="8" r="6" fill="currentColor"/>
+      <path d="M54 14 L60 26 L70 26" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <path class="beam" d="M92 18 L120 10 L120 28Z" fill="#ffb547" opacity=".55"/>
+    </symbol>
+  </svg>
+
+  <div class="toast mono" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- 1) Your content (edit these) -->
+  <script src="data/profile.js"></script>
+  <script src="data/skills.js"></script>
+  <script src="data/projects.js"></script>
+  <script src="data/journey.js"></script>
+  <script src="data/certifications.js"></script>
+  <!-- 2) The engine (no need to touch) -->
+  <script src="assets/js/icons.js"></script>
+  <script src="assets/js/render.js"></script>
+  <script src="assets/js/cosmos.js"></script>
+  <script src="assets/js/effects.js"></script>
 </body>
 </html>
